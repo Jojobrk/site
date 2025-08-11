@@ -1,0 +1,336 @@
+/* RESET DE BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* HEADER */
+header {
+  background: #002244;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 2rem; /* Ajoute cette ligne */
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 1.5rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a.active {
+  border-bottom: 2px solid gold;
+}
+
+/* HERO */
+.hero {
+  background: #CDA434;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+.presentation {
+  max-width: 800px;
+  text-align: center;
+  margin-left: 120px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.presentation p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.hero-img img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e9cc7b;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-right: 80px;
+}
+
+.hero-img img:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #002244;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem; /* Ajoute cette ligne */
+}
+
+/* Section biographie */
+.biographie-section {
+  background: #fff;
+  max-width: 900px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  color: #222;
+  line-height: 1.9;
+}
+.biographie-section h1,
+.biographie-section h2 {
+  color: #002244;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+}
+.biographie-photo {
+  float: left;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border: 4px solid #CDA434;
+}
+.biographie-citation {
+  font-style: italic;
+  background: #f8f8f8;
+  border-left: 4px solid #CDA434;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  color: #555;
+}
+
+
+/* Section contact */
+.contact-section {
+  background: #fff;
+  max-width: 600px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+.contact-section h1 {
+  color: #002244;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #002244;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: #CDA434;
+  color: #002244;
+}
+
+
+/* Section bibliothèque de livres */
+.livres-section {
+  background: #fff;
+  max-width: 1100px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.livres-section h1 {
+  color: #002244;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.livres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.livre-card {
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.livre-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+
+.livre-card img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 2px solid #CDA434;
+}
+
+.livre-card h2 {
+  font-size: 1.2rem;
+  color: #002244;
+  margin-bottom: 0.5rem;
+}
+
+.livre-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Section de video et playlist */
+.videos-section {
+  background: #fff;
+  max-width: 1100px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.videos-section h1 {
+  color: #002244;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.video-card {
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.video-card h2 {
+  font-size: 1.1rem;
+  color: #002244;
+  margin-bottom: 0.5rem;
+}
+
+.video-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.videos-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.videos-links a {
+  display: inline-block;
+  margin: 0 1rem;
+  color: #CDA434;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.videos-links a:hover {
+  color: #002244;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #002244;
+  color: white;
+  margin-top: 2rem;
+}
